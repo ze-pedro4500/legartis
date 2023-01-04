@@ -1,0 +1,12 @@
+defaultPortal: Jose
+portals:
+  - name: Jose
+    portalId: 4640853
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          CMSJ5u3XMBIIAAUAAAAAAAwY1aCbAiDZ5PgWKO7pDDIU8e_JjM5AxHgGixiVg1k4vJFN3X46IQAABEEAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAPEIUyHWZGJDbMhF-nmzfcy0pfEHoVuZKA25hMVIAWgA
+        expiresAt: '2023-01-04T16:59:48.295Z'
+    personalAccessKey: >-
+      CiQ5OGE4NTQ1OS0zYjQ0LTRiZTUtODllYi0wZTEwMzBmYTMwMDAQ1aCbAhjZ5PgWKhkABeaRgjvCVALN3c_N_3wq3Nb2hKXSo1D0SgNuYTE

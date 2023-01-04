@@ -1,0 +1,52 @@
+/* ******************************************************************************
+*********************************************************************************
+This file contains all the neccessary styles to control how your
+Drag and Drop (DND) sections look when editing content in the page editor.
+*********************************************************************************
+****************************************************************************** */
+
+.banner-area .dnd-section,
+.banner-area .dnd-section>.row-fluid{
+  padding: 0;
+  width:100%;
+}
+
+.dnd-section > .row-fluid {
+  max-width: {{ dnd_section_max_width }};
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dnd-section>.row-fluid,
+.page-center,
+.header__container,
+.footer__container,
+.content-wrapper {
+  margin:0 auto;
+  width:100%;
+}
+.dnd-section .widget-type-cell {}
+
+.body-container-wrapper {
+  padding:0 20px;
+}
+
+@media (min-width:993px) {
+
+  .mobile {
+    display:none !important;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .dnd-section .widget-type-cell {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .desktop {
+    display:none !important;
+  }
+
+}

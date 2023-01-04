@@ -1,0 +1,44 @@
+<!--
+templateType: error_page
+isAvailableForNewContent: true
+label: 404 Error Page
+-->
+{% extends "../layouts/base.html" %}
+      {% block header %}
+       
+      {% endblock header %}
+
+   
+{% block body %}
+<main class="body-container-wrapper">
+  <div class="content-wrapper">
+    <div class="error-page" data-error="404">
+
+
+      {% if request.path is string_containing '/de' %}
+      <h1 class="error-page_heading">
+       Oops - das ging schief. Entschuldige
+      </h1>
+      <a class="hs-button" href="https://www.legartis.ai/de/">Zur Startseite</a>
+
+      {% else %}
+      
+      <h1 class="error-page_heading">
+       Oops - wrong way. Sorry
+      </h1>
+      <a class="hs-button" href="https://www.legartis.ai/">Start Home</a>
+
+      {% endif %}
+
+
+    </div>
+  </div>
+</main>
+{% endblock body %}
+
+ 
+
+      {% block footer %}
+       
+      {% endblock footer%}
+

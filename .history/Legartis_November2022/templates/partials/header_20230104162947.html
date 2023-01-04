@@ -1,0 +1,34 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+{% require_css %}
+<style>
+.header-sec .cta_button {
+    border-radius: 11px;
+    color: #fff;
+    background-color: #d5365e;
+    font-size: 16px;
+    height: 40px;
+    text-align: center;
+    width: fit-content;
+    padding: 11px 20px;
+    display: unset;
+}
+.theme-button a {
+    border-radius: 38px;
+    font-size: 16px;
+    height: 40px;
+    text-align: center;
+    width: fit-content;
+    padding: 11px 26px;
+    display: unset;
+}
+</style>
+{%end_require_css%}
+<header class="header">
+
+   {% module "module_161795013138632" path="/Legartis_April2021/modules/Header With Menu", label="Header With Menu" %}
+<div class="lang-box"> {% language_switcher "language_switcher" overrideable=false, display_mode='localized', label='Language Switcher' %}</div>
+ 
+</header>

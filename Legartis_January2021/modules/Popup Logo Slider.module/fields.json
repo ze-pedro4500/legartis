@@ -1,0 +1,55 @@
+[ {
+  "id" : "35ed73c4-9501-82f1-440f-cd19601c1cb7",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Trusted by the best companies & Awards:"
+}, {
+  "id" : "4ee5f6ee-0727-0754-1477-0df556ab65b0",
+  "name" : "logos",
+  "display_width" : null,
+  "label" : "Logos",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "f258d03f-c6ca-69fb-e0fd-08203a7b44ff",
+    "name" : "logo",
+    "display_width" : null,
+    "label" : "logo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "disabled"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "disabled"
+    }
+  }
+} ]

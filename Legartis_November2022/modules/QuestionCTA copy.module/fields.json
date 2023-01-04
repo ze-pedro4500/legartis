@@ -1,0 +1,122 @@
+[ {
+  "id" : "dea0b67d-10a5-161e-4d75-26628ddacae3",
+  "name" : "design",
+  "display_width" : null,
+  "label" : "Design",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "1", "Design 1" ], [ "2", "Design 2" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "type" : "choice",
+  "default" : "1"
+}, {
+  "id" : "06e002af-633e-a7b0-02ad-0da38af75f5b",
+  "name" : "question",
+  "display_width" : null,
+  "label" : "Question",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Sie möchten Legartis live erleben?"
+}, {
+  "id" : "33b11f28-6366-5369-0042-b97d344549f1",
+  "name" : "cta_field",
+  "display_width" : null,
+  "label" : "CTA",
+  "required" : true,
+  "locked" : false,
+  "type" : "cta",
+  "default" : "bd6d509b-a0c0-4069-9107-b1c22331929b"
+}, {
+  "id" : "fdd5987b-ed94-95ff-34ea-4c372bc5dd2e",
+  "name" : "bg_color1",
+  "display_width" : null,
+  "label" : "BG Color1",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "dea0b67d-10a5-161e-4d75-26628ddacae3",
+    "controlling_field_path" : null,
+    "controlling_value_regex" : "1",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#0600FF",
+    "opacity" : 100
+  }
+}, {
+  "id" : "53d4b3d6-4c9c-f2fa-cb54-3ad976aa8c5f",
+  "name" : "bg_color2",
+  "display_width" : null,
+  "label" : "BG Color2",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "dea0b67d-10a5-161e-4d75-26628ddacae3",
+    "controlling_field_path" : null,
+    "controlling_value_regex" : "1",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#FFFFFF",
+    "opacity" : 100
+  }
+}, {
+  "id" : "ce01f684-7ef5-d3a6-4ebc-0aaadbbe8b14",
+  "name" : "cta_color",
+  "display_width" : null,
+  "label" : "CTA Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#FF0201",
+    "opacity" : 100
+  }
+}, {
+  "id" : "d6ffc1fd-5a95-72a3-521d-a31c25b48b6b",
+  "name" : "border_color",
+  "display_width" : null,
+  "label" : "Border color",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "dea0b67d-10a5-161e-4d75-26628ddacae3",
+    "controlling_field_path" : null,
+    "controlling_value_regex" : "2",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#4256a3",
+    "opacity" : 100
+  }
+}, {
+  "id" : "1a5b97bf-2ae4-c33a-059f-10dd9b42ed54",
+  "name" : "text_color",
+  "display_width" : null,
+  "label" : "Text Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#263479",
+    "opacity" : 100
+  }
+} ]

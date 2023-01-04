@@ -1,0 +1,225 @@
+/* ******************************************************************************
+*********************************************************************************
+This file contains all the neccessary styles to control how your
+menu items appear, including the link and hover effects.
+*********************************************************************************
+****************************************************************************** */
+
+.hs-menu-wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-wrap,
+.custom-header-buttons .hs_cos_wrapper_type_menu,
+.custom-header-buttons .hs-menu-wrapper{
+  margin:0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.custom-menu-primary .hs-menu-wrapper>ul>li {
+  display: inline-block;
+  margin-right: 35px;
+  padding: 10px 0px;
+}
+
+.custom-menu-primary .hs-menu-wrapper>ul li {
+  position: relative;
+}
+
+.custom-menu-primary .hs-menu-wrapper>ul li a ,
+.custom-header-language a{
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.custom-menu-primary .hs-menu-wrapper>ul li.hs-item-has-children > a:after {
+  content: "\f078";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 11px;
+  margin-left: 7px;
+}
+
+.custom-menu-primary .hs-menu-wrapper>ul li li{
+  display: block;
+}
+
+.custom-menu-primary .hs-menu-wrapper>ul li li a {
+  display: block;
+  padding: 10px 15px;
+}
+
+.custom-header-language {
+  margin-right: 20px;
+}
+
+.custom-header-buttons .hs-menu-wrapper>ul{
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.custom-header-buttons .hs-menu-wrapper>ul>li:not(:last-of-type){
+  margin-right: 20px;
+}
+
+.custom-header-buttons .hs-menu-wrapper>ul>li>a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.custom-header-buttons .hs-menu-wrapper>ul>li:nth-of-type(even)>a {
+  display: inline-block;
+  padding: 11px 23px;
+}
+
+@media (min-width:993px) {
+  .custom-menu-primary .hs-menu-wrapper>ul li>ul {
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    min-width: 170px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+    display:block !important;
+  }
+
+  .custom-menu-primary .hs-menu-wrapper>ul li:hover>ul{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width:992px) {
+
+  .hamburger {
+    cursor:pointer;
+  }
+
+  .hamburger .hamburger-circle {
+    content: "";
+    position: relative;
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    transition: 0.3s border ease;
+    -webkit-transition: 0.3s border ease;
+    -ms-transition: 0.3s border ease;
+  } 
+
+  .hamburger .line {
+    content: "";
+    width: 23px;
+    height: 2px;
+    background-color: #061443;
+    position: absolute;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+  }
+
+  .hamburger .line.line1 {
+    left: 16px;
+    top: 20px;
+  }
+
+  .mobile-open .hamburger .line.line1 {
+    top: 26px;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+  }
+
+  .hamburger .line.line2 {
+    left: 16px;
+    top: 26px;
+    width: 15px;
+  }
+
+  .mobile-open .hamburger .line.line2 {
+    top: calc(50% - 1px);
+    opacity: 0;
+  }
+
+  .hamburger .line.line3 {
+    left: 16px;
+    top: 32px;
+  }
+
+  .mobile-open .hamburger .line.line3 {
+    top: 26px;
+    transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+  }
+
+  .menu-wrap {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    top: 80px;
+    background: #fff;
+    display: block;
+    z-index: -1;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    overflow-x:hidden;
+    -webkit-transform: translate3d(0, -1000px, 0);
+    transform: translate3d(0, -1000px, 0);
+    opacity: 0;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    padding: 20px;
+  }
+
+  .mobile-open .menu-wrap {
+    -webkit-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
+    opacity: 1;
+  }
+
+  .custom-menu-primary .hs-menu-wrapper>ul>li {
+    display: block;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .custom-menu-primary .hs-menu-wrapper>ul li>ul {
+    margin-top: 10px;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -ms-box-shadow: none;
+  }
+
+}
+
+
+

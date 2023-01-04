@@ -1,0 +1,43 @@
+<!--
+templateType: global_partial
+label: Page Header
+-->
+<header class="custom-header-height">
+  <div class="custom-header">
+    <div class="header__container">
+      <div class="custom-logo">
+        {% set logo_file =  get_asset_url('../../images/logo.png') %}
+        {% module "header_logo" link="https://legartis.ai/" path="@hubspot/logo", label="Header Logo", img={src="{{logo_file}}",ALT="LEGARTIS" override_inherited_src= true} %}
+      </div>
+
+      <div class="custom-header-right">
+        <div class="menu-wrap">
+          <div class="custom-menu-primary">
+            {% menu "header_menu" id=40555691642, site_map_name='Default', overrideable=False, root_type='site_root', flyouts='false', max_levels='2', flow='horizontal', label='Header Menu' %}
+          </div>
+
+          <div class="custom-header-language">
+            {% module_block module "header_language" path="@hubspot/rich_text" label="Header Language" %}
+            {% module_attribute "html" %}
+            <a href="https://legartis.ai">EN</a> / <a href="https://legartis.ai/de/">DE</a>
+            {% end_module_attribute %}
+            {% end_module_block %}
+          </div>
+
+          <div class="custom-header-buttons">
+            {% menu "header_buttons" id=40555652574, site_map_name='Default', overrideable=False, root_type='site_root', flyouts='false', max_levels='1', flow='horizontal', label='Header Buttons' %}
+          </div>
+        </div>
+
+        <div class="hamburger mobile-trigger mobile">
+          <div class="hamburger-circle">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,103 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label:  Solutions - Legal Page NEW
+-->
+{% require_css %}
+  <style>
+  .faq-container {
+    padding-top: 40px !important;
+}
+  .slider {
+    margin-bottom: 80px;
+}
+  @media only screen and (max-width: 1000px){
+  .imatext span div {
+      text-align: center !important;
+  }
+  .imatext span {
+    text-align: center;
+}
+.imatext span {
+    padding-top: 10px;
+}
+.tworevcont h1 {
+    width: 70% !important;
+    text-align: center !important;
+    margin: auto !important;
+    margin-bottom: 60px !important;
+    margin-top: 40px !important;
+}
+  }
+  @media only screen and (max-width: 850px){
+  .imatecontamobile {
+    padding-top: 50px;
+}
+.imgdiv {
+    padding-bottom: 0px !important;
+}
+}
+
+@media only screen and (max-width: 850px){
+.imatecontamobile {
+    padding-top: 125px;
+}
+.qctacont {
+    margin-top: 0px;
+    height: 200px;
+}
+.txtcta span {
+    margin: 10px auto auto !important;
+}
+}
+  </style>
+  {% end_require_css %}
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--home solution-page legartis', label='Main section' %}
+  
+  {% dnd_section full_width = true, padding={'right':0, 'left': 0, 'top':0, 'bottom':0 } %}
+  {% dnd_module path="../modules/Solution Banner Module.module" %}        
+  {% end_dnd_module %}
+  {% end_dnd_section %} 
+ 
+  {% dnd_section full_width = true, padding={'right':0, 'left': 0, 'top':0, 'bottom':0 } %}
+  {% dnd_module path="../modules/Solution Helps Your Business.module" %}        
+  {% end_dnd_module %}
+  {% end_dnd_section %} 
+  
+  {% dnd_section full_width = true, padding={'right':0, 'left': 0, 'top':0, 'bottom':0 } %}
+  {% dnd_module path="../modules/Solution Only Text And CTA Module.module" %}        
+  {% end_dnd_module %}
+  {% end_dnd_section %}   
+  
+  {% dnd_section full_width = true, padding={'right':0, 'left': 0, 'top':0, 'bottom':0 } %}
+  {% dnd_module path="../modules/Solutions Logo Slider.module" %}        
+  {% end_dnd_module %}
+  {% end_dnd_section %}
+ 
+  {% dnd_section full_width = true, padding={'right':0, 'left': 0, 'top':0, 'bottom':0 } %}
+  {% dnd_module path="../modules/Teams Module.module" %}        
+  {% end_dnd_module %}
+  {% end_dnd_section %}  
+  
+  {% dnd_section full_width = true, padding={'right':0, 'left': 0, 'top':0, 'bottom':0 } %}
+  {% dnd_module path="../modules/Solution Key Benefits Module.module" %}        
+  {% end_dnd_module %}
+  {% end_dnd_section %}  
+  
+  {% dnd_section full_width = true, padding={'right':0, 'left': 0, 'top':0, 'bottom':0 } %}
+  {% dnd_module path="../modules/Solution Only Text Module.module" %}        
+  {% end_dnd_module %}
+  {% end_dnd_section %} 
+  
+  {% dnd_section full_width = true, padding={'right':0, 'left': 0, 'top':0, 'bottom':0 } %}
+  {% dnd_module path="../modules/Solution Only Text And CTA Module.module" %}        
+  {% end_dnd_module %}
+  {% end_dnd_section %} 
+ 
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

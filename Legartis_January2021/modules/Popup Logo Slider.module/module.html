@@ -1,0 +1,24 @@
+<div class="contact-logoes-wrapper">
+  <p>{{ module.section_title }}</p>
+  <div class="contact-logoes">
+    <div class="logo-wrapper">
+      {% for item in module.logos %}
+      <div class="logo">
+        <img src="{{ item.logo.src }}" alt="{{ item.logo.alt }}">
+      </div>
+      {% endfor %}
+    </div>
+    <div class="contact-logo-slider">
+      <div class="slider contact-carousel">
+        
+        {% for item in module.logos %}
+        <div class="logo">
+          <img src="{{ item.logo.src }}" alt="{{ item.logo.alt }}">
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+  </div>
+  <!-- contact-logoes -->
+</div>

@@ -1,0 +1,257 @@
+<!--
+templateType: blog
+isAvailableForNewContent: true
+label: Blog Listing
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<div class="blog-container-wrapper">
+  {% if blog_author %}
+
+  <div class="author-page">
+    <div class="page-center">
+      <div class="hs-author-profile">
+        <div class="author-information">
+          <ul class="breadcrumb">
+            <li>
+              <a href="{{ group.absolute_url }}">{{ group.public_title }}</a>
+            </li>
+            <li>/</li>
+            <li>Author</li>
+          </ul>
+          <h2 class="hs-author-name">{{ blog_author }}</h2>
+          <div class="hs-author-bio">{{ blog_author.bio }}</div>
+          {% if blog_author.has_social_profiles %}
+          <div class="author-social-share">
+            {% if blog_author.website %}
+            <a href="{{ blog_author.website }}" target="_blank" class="hs-author-social-link hs-social-website" title="Website">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+            </a>
+            {% endif %}
+            {% if blog_author.facebook %}
+            <a href="{{ blog_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook" title="Facebook">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            {% endif %}
+            {% if blog_author.linkedin %}
+            <a href="{{ blog_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin" title="LinkedIn">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            {% endif %}
+            {% if blog_author.twitter %}
+            <a href="{{ blog_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-twitter" title="Twitter">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+        <div class="author-avatar">
+          <img alt="{{ blog_author }}" src="{{ blog_author.avatar }}">
+        </div>
+      </div>
+    </div>
+  </div>
+  {% elif topic %}
+  <div class="topic-page">
+    <div class="page-center">
+      <div class="topic-bread-title">
+        <ul class="breadcrumb">
+          <li>
+            <a href="{{ group.absolute_url }}">{{ group.public_title }}</a>
+          </li>
+          <li>/</li>
+          <li>Topic</li>
+        </ul>
+        <h2>{{ topic|replace('-',' ')|capitalize }}</h2>
+      </div>
+      <div class="blog-topics">
+        {% set my_tags = blog_tags('group.id') %}
+        <ul class="topics">
+          <li class="topic">Select a Topic 
+            <i class="fa fa-angle-down"></i>
+          </li>
+          <ul>
+            <li>
+              <a href="{{ group.absolute_url }}">All</a>
+            </li>
+            {% for item in my_tags %}
+            <li>
+              <a href="{{ blog_tag_url(group.id, item.slug) }}">{{ item }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="blog-header">
+    <div class="page-center clearfix">
+      <div class="blog-topics-wrapper">
+        <h3>Topics</h3>
+        {% set my_tags = blog_tags('group.id') %}
+        <div class="blog-topics">
+          <ul class="topics">
+            <li class="topic">Select a Topic 
+              <i class="fa fa-angle-down"></i>
+            </li>
+            <ul>
+              <li>
+                <a href="{{ group.absolute_url }}">All</a>
+              </li>
+              {% for item in my_tags %}
+              <li>
+                <a href="{{ blog_tag_url(group.id, item.slug) }}">{{ item }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="subscription-title-button">
+        <h3>
+          Stay up to date
+        </h3>
+        <a href="javascript:void(0);" class="subscribe-button"><svg class="envelope-icon" width="36" height="27" viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.625 0H3.375C1.47656 0 0 1.54688 0 3.375V23.625C0 25.5234 1.47656 27 3.375 27H32.625C34.4531 27 36 25.5234 36 23.625V3.375C36 1.54688 34.4531 0 32.625 0ZM32.625 3.375V6.25781C31.0078 7.59375 28.4766 9.5625 23.1328 13.7812C21.9375 14.6953 19.6172 16.9453 18 16.875C16.3125 16.9453 13.9922 14.6953 12.7969 13.7812C7.45312 9.5625 4.92188 7.59375 3.375 6.25781V3.375H32.625ZM3.375 23.625V10.6172C4.92188 11.8828 7.24219 13.7109 10.6875 16.4531C12.2344 17.6484 14.9766 20.3203 18 20.25C20.9531 20.3203 23.625 17.6484 25.2422 16.4531C28.6875 13.7109 31.0078 11.8828 32.625 10.6172V23.625H3.375Z" fill="#FE2D55"></path>
+          </svg> SUBSCRIBE TO OUR BLOG</a>
+      </div>
+
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="blog-content">
+    <div class="page-center">
+      <div class="blog-section">
+        <div class="blog-listing-wrapper cell-wrapper">
+          <div class="blog-section">
+            <div class="blog-listing-wrapper cell-wrapper">
+              <div class="post-listing">
+                {% for content in contents %}
+                <div class="post-item">
+                  <div class="post-body clearfix">
+                    {% if content.featured_image %}
+                    <div class="hs-featured-image-wrapper">
+                      <a href="{{ content.absolute_url }}" title="{{ content.name|striptagws }}" class="hs-featured-image-link">
+                        <img src="{{ resize_image_url(content.featured_image,767) }}" alt="{{ content.name|striptags }}" class="hs-featured-image">
+                      </a>
+                    </div>
+                    {% endif %}
+                    {% if content.topic_list %}
+                    <p id="hubspot-topic_data">
+                      {% for topic in content.topic_list %}
+                      <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+                      {% endfor %}
+                    </p>
+                    {% endif %}
+                    <div class="post-header">
+                      <h5>
+                        <a href="{{ content.absolute_url }}">{{ content.name|striptags }}</a>
+                      </h5>
+
+                      <div id="hubspot-author_data" class="hubspot-editable">
+                        {% if content.blog_post_author %}By
+                        <a class="author-link" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">{{ content.blog_post_author.display_name }}</a> {% endif %}on   {{ content.publish_date_local_time.strftime('%B %e, %Y') }}  
+                      </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <p>{{ content.post_list_content|truncatehtml(200,'...',false)|striptags|safe }}</p>
+                    {% if content_group.show_summary_in_listing %}
+                    <a href="{{ content.absolute_url }}" title="{{ content.name|striptags }}" class="continue-reading">
+                      Continue Reading
+                    </a>
+                    {% endif %}
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+
+              <div class="blog-pagination">
+                <ul>
+                  {% set page_list = [-2, -1, 0, 1, 2] %}
+                  {% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+                  {% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+                  {% elif current_page_num == 2 %}{% set offset = 1 %}
+                  {% elif current_page_num == 1 %}{% set offset = 2 %}
+                  {% else %}{% set offset = 0 %}{% endif %}
+
+                  {% if last_page_num %}<li class="first-posts-link"><a class="prev-link" href="{{ blog_page_link(last_page_num) }}"><i class="fa fa-angle-left"></i> PREVIOUS</a></li>{% endif %}
+
+                  <span class="pg">
+                    {% if contents.total_page_count > 5 %}
+                    {% if current_page_num >= 4 %}
+                    <li><a href="{{ blog_page_link(1) }}">1</a></li>
+                    <li> <a class="elipses" href="{% if current_page_num <= 5 %}{{ blog_page_link(1) }}{% else %}{{ blog_page_link(current_page_num - 5) }}{% endif %}">...</a></li>
+                    {% endif %}
+                    {% endif %}
+
+                    {% for page in page_list %}
+                    {% set this_page = current_page_num + page + offset %}
+                    {% if this_page > 0 and this_page <= contents.total_page_count %}
+                    <li {% if this_page == current_page_num %}class="active"{% endif %}><a href="{{ blog_page_link(this_page) }}">{{ this_page }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if contents.total_page_count > 5 %}
+                    {% if contents.total_page_count - current_page_num > 2 %}
+                    <li><a class="elipses" href="{% if contents.total_page_count - current_page_num <= 5 %}{{ contents.total_page_count }}{% else %}{{ blog_page_link(current_page_num + 5) }}{% endif %}">...</a></li>
+                    <li><a href="{{ blog_page_link(contents.total_page_count) }}">{{ contents.total_page_count }}</a></li>
+                    {% endif %}
+                    {% endif %}
+                  </span>
+
+                  {% if next_page_num %}<li class="last-posts-link "><a class="next-link" href="{{ blog_page_link(current_page_num + 1) }}">NEXT <i class="fa fa-angle-right"></i></a></li>{% endif %}
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-subscription">
+    <div class="page-center">
+      <div class="subscription-title-button">
+        <h3>
+          Get latest articles directly in your inbox, stay up to date
+        </h3>
+        <a href="javascript:void(0);" class="subscribe-button"><svg class="envelope-icon" width="36" height="27" viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.625 0H3.375C1.47656 0 0 1.54688 0 3.375V23.625C0 25.5234 1.47656 27 3.375 27H32.625C34.4531 27 36 25.5234 36 23.625V3.375C36 1.54688 34.4531 0 32.625 0ZM32.625 3.375V6.25781C31.0078 7.59375 28.4766 9.5625 23.1328 13.7812C21.9375 14.6953 19.6172 16.9453 18 16.875C16.3125 16.9453 13.9922 14.6953 12.7969 13.7812C7.45312 9.5625 4.92188 7.59375 3.375 6.25781V3.375H32.625ZM3.375 23.625V10.6172C4.92188 11.8828 7.24219 13.7109 10.6875 16.4531C12.2344 17.6484 14.9766 20.3203 18 20.25C20.9531 20.3203 23.625 17.6484 25.2422 16.4531C28.6875 13.7109 31.0078 11.8828 32.625 10.6172V23.625H3.375Z" fill="#FE2D55"></path>
+          </svg> SUBSCRIBE TO OUR BLOG</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="subscription-popup-box">
+  <div class="subscription-popup-box-inner">
+    <div class="blog-popup-header">
+      <div class="envelope-close-icon">
+        <svg class="envelope-icon" width="36" height="27" viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.625 0H3.375C1.47656 0 0 1.54688 0 3.375V23.625C0 25.5234 1.47656 27 3.375 27H32.625C34.4531 27 36 25.5234 36 23.625V3.375C36 1.54688 34.4531 0 32.625 0ZM32.625 3.375V6.25781C31.0078 7.59375 28.4766 9.5625 23.1328 13.7812C21.9375 14.6953 19.6172 16.9453 18 16.875C16.3125 16.9453 13.9922 14.6953 12.7969 13.7812C7.45312 9.5625 4.92188 7.59375 3.375 6.25781V3.375H32.625ZM3.375 23.625V10.6172C4.92188 11.8828 7.24219 13.7109 10.6875 16.4531C12.2344 17.6484 14.9766 20.3203 18 20.25C20.9531 20.3203 23.625 17.6484 25.2422 16.4531C28.6875 13.7109 31.0078 11.8828 32.625 10.6172V23.625H3.375Z" fill="#FE2D55"></path>
+        </svg> 
+        <div class="popup-close-icon">
+          <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.57915 7.483L14.78 1.28213C14.9026 1.13904 14.9666 0.954975 14.9593 0.766723C14.9521 0.57847 14.874 0.399895 14.7408 0.266681C14.6076 0.133468 14.429 0.0554274 14.2408 0.048156C14.0525 0.0408846 13.8684 0.104918 13.7254 0.227459L7.52448 6.42833L1.32361 0.219979C1.18276 0.0791288 0.991724 0 0.792532 0C0.59334 0 0.402306 0.0791288 0.261456 0.219979C0.120606 0.360829 0.0414776 0.551863 0.0414776 0.751055C0.0414776 0.950247 0.120606 1.14128 0.261456 1.28213L6.46981 7.483L0.261456 13.6839C0.183155 13.7509 0.11956 13.8334 0.0746634 13.9262C0.0297663 14.019 0.00453635 14.1201 0.000557399 14.2231C-0.00342155 14.3261 0.013936 14.4289 0.0515411 14.5249C0.0891462 14.6208 0.146187 14.708 0.219082 14.7809C0.291978 14.8538 0.379155 14.9109 0.475141 14.9485C0.571128 14.9861 0.673851 15.0034 0.776864 14.9994C0.879877 14.9955 0.980956 14.9702 1.07376 14.9253C1.16656 14.8804 1.24907 14.8168 1.31613 14.7385L7.52448 8.53767L13.7254 14.7385C13.8684 14.8611 14.0525 14.9251 14.2408 14.9178C14.429 14.9106 14.6076 14.8325 14.7408 14.6993C14.874 14.5661 14.9521 14.3875 14.9593 14.1993C14.9666 14.011 14.9026 13.827 14.78 13.6839L8.57915 7.483Z" fill="#999999"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-popup-form">
+      {% module "blog_popup_form" path="@hubspot/form", form={ "form_id": "3aec2b37-1bfb-455b-bcff-59139379404a" }, title="Stay up to date" label="Blog Subscription Popup Form"  %}
+    </div>
+  </div>
+</div>
+{{ require_css("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css") }}
+{% endblock body %}

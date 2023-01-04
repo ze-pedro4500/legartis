@@ -1,0 +1,498 @@
+
+.body-container-wrapper .custom_error_message form,
+.body-container-wrapper .widget-type-form,
+.body-container-wrapper .widget-type-blog_subscribe,
+.body-container-wrapper .widget-type-google_search,
+.body-container-wrapper .widget-type-password_prompt.custom_error_message,
+.body-container-wrapper .widget-type-email_simple_subscription,
+.hs-blog-post .body-container-wrapper .widget-type-blog_comments,
+.body-container-wrapper .hs-search-field__bar,
+.body-container-wrapper .submitted-message,
+.body-container-wrapper #hs_cos_wrapper_password_prompt {
+  width:100%;
+  max-width:500px;
+}
+
+.body-container-wrapper form,
+.body-container-wrapper .custom_error_message form,
+.body-container-wrapper .widget-type-form form,
+.body-container-wrapper .widget-type-blog_subscribe form,
+.body-container-wrapper .widget-type-google_search form,
+.body-container-wrapper .widget-type-password_prompt.custom_error_message form,
+.body-container-wrapper .widget-type-email_simple_subscription form,
+.hs-blog-post .body-container-wrapper .widget-type-blog_comments form,
+.body-container-wrapper .hs-search-field__bar form,
+.body-container-wrapper .submitted-message form,
+.body-container-wrapper #hs_cos_wrapper_password_prompt form,
+.body-container-wrapper .form-container-wrapper {
+  width:100%;
+  max-width:500px;
+}
+
+.hs-blog-post .body-container-wrapper .widget-type-blog_comments,
+.hs-blog-post .body-container-wrapper .widget-type-blog_comments form,
+.body-container-wrapper.subscription_preferences .form-container-wrapper{
+  max-width:100%;
+}
+
+
+#email-prefs-form {
+  max-width:100%;
+}
+
+button {
+  outline:0;
+}
+
+.hs-button{
+  cursor:pointer;
+  display: -moz-inline-stack;
+  display: inline-block;
+  text-decoration: none;
+  white-space:normal;
+  outline:0;
+  text-align: center;
+  background-color: #e2446d;
+  color: #fff;
+  padding: 12px 25px;
+  cursor: pointer;
+  margin-top: 35px;
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.hs-button:hover,
+.hs-button:focus{
+  text-decoration: none;
+}
+
+
+.content-wrapper .custom_error_message form,
+.content-wrapper .widget-type-form,
+.content-wrapper .widget-type-blog_subscribe,
+.content-wrapper .widget-type-google_search,
+.content-wrapper .widget-type-password_prompt.custom_error_message,
+.content-wrapper .widget-type-email_simple_subscription,
+.hs-blog-post .content-wrapper .widget-type-blog_comments,
+.content-wrapper .hs-search-field__bar{
+  display:block;
+}
+
+
+
+.hs-form label {
+  color: {{ form_label_color }};
+}
+
+.form-container>.hs_cos_wrapper>.hs-form-field {
+  display:none;
+}
+
+label {
+
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+form input[type="text"],
+form input[type="password"], 
+form input[type="datetime"], 
+form input[type="datetime-local"], 
+form input[type="date"], 
+form input[type="month"], 
+form input[type="time"], 
+form input[type="week"], 
+form input[type="number"], 
+form input[type="email"], 
+form input[type="url"], 
+form input[type="search"], 
+form input[type="tel"], 
+form input[type="color"],
+form input[type="file"],
+form textarea,
+.hs-search-field__input,
+#hs-pwd-widget-password{ 
+  width: 100%;
+  max-width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+form input[type="text"],
+form input[type="password"], 
+form input[type="datetime"], 
+form input[type="datetime-local"], 
+form input[type="date"], 
+form input[type="month"], 
+form input[type="time"], 
+form input[type="week"], 
+form input[type="number"], 
+form input[type="email"], 
+form input[type="url"], 
+form input[type="search"], 
+form input[type="tel"], 
+form input[type="color"],
+form input[type="file"],
+form textarea,
+form  select,
+.hs-input,
+.hs-search-field__input,
+#hs-pwd-widget-password{
+  outline:0;
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 0px;
+  border-bottom: 1px solid rgba(18, 54, 132, 0.2);
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -ms-border-radius: 0px;
+  padding: 7px 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #123684;
+  opacity: 1;
+  background-color: transparent;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus, 
+form input[type="datetime"]:focus, 
+form input[type="datetime-local"]:focus, 
+form input[type="date"]:focus, 
+form input[type="month"]:focus, 
+form input[type="time"]:focus, 
+form input[type="week"]:focus, 
+form input[type="number"]:focus, 
+form input[type="email"]:focus, 
+form input[type="url"]:focus, 
+form input[type="search"]:focus, 
+form input[type="tel"]:focus,
+form input[type="color"]:focus,
+form input[type="file"]:focus,
+form textarea:focus,
+form select:focus,
+form select:focus,
+form textarea:focus,
+.hs-input:focus, 
+.hs-search-field__input:focus,
+#hs-pwd-widget-password:focus{
+}
+
+form input[type="text"]:hover,
+form input[type="password"]:hover, 
+form input[type="datetime"]:hover, 
+form input[type="datetime-local"]:hover, 
+form input[type="date"]:hover, 
+form input[type="month"]:hover, 
+form input[type="time"]:hover, 
+form input[type="week"]:hover, 
+form input[type="number"]:hover, 
+form input[type="email"]:hover, 
+form input[type="url"]:hover, 
+form input[type="search"]:hover, 
+form input[type="tel"]:hover,
+form input[type="color"]:hover,
+form input[type="file"]:hover,
+form textarea:hover,
+form select:hover,
+form select:hover,
+form textarea:hover,
+.hs-search-field__input:hover,
+#hs-pwd-widget-password:hover{
+
+}
+
+form input[type="text"].error,
+form input[type="password"].error, 
+form input[type="datetime"].error, 
+form input[type="datetime-local"].error, 
+form input[type="date"].error, 
+form input[type="month"].error, 
+form input[type="time"].error, 
+form input[type="week"].error, 
+form input[type="number"].error, 
+form input[type="email"].error, 
+form input[type="url"].error, 
+form input[type="search"].error, 
+form input[type="tel"].error,
+form input[type="color"].error,
+form input[type="file"].error,
+form textarea.error,
+form select.error,
+form select.error,
+form textarea.error,
+.hs-input.error, 
+.hs-search-field__input.error,
+#hs-pwd-widget-passwor.error{
+  border-color: #c87872;
+}
+
+form input[type="text"].error:focus,
+form input[type="password"].error:focus, 
+form input[type="datetime"].error, 
+form input[type="datetime-local"].error:focus, 
+form input[type="date"].error:focus, 
+form input[type="month"].error:focus, 
+form input[type="time"].error:focus, 
+form input[type="week"].error:focus, 
+form input[type="number"].error:focus, 
+form input[type="email"].error:focus, 
+form input[type="url"].error:focus, 
+form input[type="search"].error:focus, 
+form input[type="tel"].error:focus,
+form input[type="color"].error:focus,
+form input[type="file"].error:focus,
+form textarea.error:focus,
+form select.error:focus,
+form select.error:focus,
+form textarea.error:focus,
+.hs-input.error:focus, 
+.hs-search-field__input.error:focus,
+#hs-pwd-widget-passwor.error:focus {
+
+}
+
+
+#hs-pwd-widget-password {
+  height:33px !important;
+  margin-top:0 !important;
+}
+
+
+.hs-input[type=radio] {
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 5px 3px 0px;
+  line-height: normal;
+  border: none;
+  min-height:auto;
+}
+
+.hs-input[type=file] {
+  background-color: #fff;
+  padding: initial;
+  border: initial;
+  line-height: initial;
+  box-shadow: none;
+}
+
+.hs-input:-moz-placeholder {
+  color: {{ form_placeholder_color }};
+}
+
+.hs-input::-webkit-input-placeholder {
+  color: {{ form_placeholder_color }};
+}
+
+.hs-input input,
+.hs-input textarea {
+  transition: border 0.2s linear;
+}
+
+
+textarea.hs-input {
+  height: auto;
+}
+
+select[multiple].hs-input {
+  height: inherit;
+}
+
+/* Force single column fields to full width inside of fieldsets */
+fieldset.form-columns-1 .hs-input:not([type=radio]):not([type=checkbox]) {
+  width: 100% !important;
+}
+
+.actions {
+  padding: 0;
+}
+
+.inputs-list {
+  margin: 0 !important;
+  width: 100%;
+  padding-left: 0 !important;
+}
+.inputs-list > li {
+  display: block;
+  padding: 0;
+  width: 100%;
+  padding-top: 0;
+}
+.inputs-list label {
+  font-size: 12px;
+  color: #123684;
+  margin-bottom: 10px;
+  display:block;
+  position:relative;
+}
+.inputs-list:first-child {
+  padding-top: 6px;
+}
+.inputs-list > li + li {
+  padding-top: 2px;
+}
+.inputs-list label > input,
+.inputs-list label > span {
+  vertical-align: middle;
+}
+
+.inputs-list label > span {
+  left: 20px;
+  position: relative;
+  top: -5px;
+}
+
+.inputs-list label > span a,
+.inputs-list label > span a:hover{
+  color: #e2446d;
+}
+
+.hs-input[type=checkbox] {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.hs-error-msgs {
+  margin:10px 0;
+  padding:0;
+  list-style:none;
+}
+.hs-error-msgs label {
+  margin: 0;
+  font-weight: normal;
+  display: block;
+  font-size: 12px;
+}
+
+.hs-form-field input+label {
+  display:inline-block;
+}
+
+hs-input[type=checkbox], .hs-input[type=radio] {
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 5px 3px 0px;
+  line-height: normal;
+  border: none;
+}
+
+
+ul.no-list {
+  list-style: none;
+}
+
+.hs-form-field {
+  margin-bottom: 18px;
+}
+
+.hs-field-desc {
+  color: {{ form_description_color }};
+  margin: 0px 0px 6px;
+  font-size: 14px;
+}
+
+.hs-form-required {
+  color: red;
+}
+
+
+.email-correction, .email-validation {
+  padding-top: 3px;
+  font-size: 12px;
+}
+.email-correction a,
+.email-validation a {
+  cursor: pointer;
+}
+@media (max-width: 400px),
+  (min-device-width: 320px) and (max-device-width: 480px) {
+    .email-correction form .form-columns-2 .hs-form-field,
+    .email-correction form .form-columns-3 .hs-form-field,
+    .email-validation form .form-columns-2 .hs-form-field,
+    .email-validation form .form-columns-3 .hs-form-field {
+      float: none;
+      width: 100%;
+    }
+    .email-correction form .form-columns-2 .hs-form-field .hs-input,
+    .email-correction form .form-columns-3 .hs-form-field .hs-input,
+    .email-validation form .form-columns-2 .hs-form-field .hs-input,
+    .email-validation form .form-columns-3 .hs-form-field .hs-input {
+      width: 90%;
+    }
+    .email-correction form .form-columns-2 .hs-form-field input[type=checkbox],
+    .email-correction form .form-columns-2 .hs-form-field input[type=radio],
+    .email-correction form .form-columns-3 .hs-form-field input[type=checkbox],
+    .email-correction form .form-columns-3 .hs-form-field input[type=radio],
+    .email-validation form .form-columns-2 .hs-form-field input[type=checkbox],
+    .email-validation form .form-columns-2 .hs-form-field input[type=radio],
+    .email-validation form .form-columns-3 .hs-form-field input[type=checkbox],
+    .email-validation form .form-columns-3 .hs-form-field input[type=radio] {
+      width: 24px;
+    }
+}
+
+.hs-button,
+.hs-form-field input[type=text],
+.hs-form-field input[type=email],
+.hs-form-field input[type=phone],
+.hs-form-field input[type=number],
+.hs-form-field input[type=tel],
+.hs-form-field input[type=date],
+.hs-form-field textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.hs-default-font-element,
+.hs-main-font-element {
+  font-family: {{ body_font_family }};
+}
+
+/* ================== Footer Form ============================ */
+
+@media (max-width:767px) {
+
+  .body-container-wrapper .custom_error_message form,
+  .body-container-wrapper .widget-type-form,
+  .body-container-wrapper .widget-type-blog_subscribe,
+  .body-container-wrapper .widget-type-google_search,
+  .body-container-wrapper .widget-type-password_prompt.custom_error_message,
+  .body-container-wrapper .widget-type-email_simple_subscription,
+  .hs-blog-post .body-container-wrapper .widget-type-blog_comments,
+  .body-container-wrapper .hs-search-field__bar,
+  .body-container-wrapper .submitted-message,
+  .body-container-wrapper #hs_cos_wrapper_password_prompt {
+    max-width:100%;
+  }
+
+  .body-container-wrapper form,
+  .body-container-wrapper .custom_error_message form,
+  .body-container-wrapper .widget-type-form form,
+  .body-container-wrapper .widget-type-blog_subscribe form,
+  .body-container-wrapper .widget-type-google_search form,
+  .body-container-wrapper .widget-type-password_prompt.custom_error_message form,
+  .body-container-wrapper .widget-type-email_simple_subscription form,
+  .hs-blog-post .body-container-wrapper .widget-type-blog_comments form,
+  .body-container-wrapper .hs-search-field__bar form,
+  .body-container-wrapper .submitted-message form,
+  .body-container-wrapper #hs_cos_wrapper_password_prompt form,
+  .body-container-wrapper #email-prefs-form,
+  .body-container-wrapper .form-container-wrapper{
+    max-width:100%;
+  }
+
+}

@@ -1,0 +1,128 @@
+<!--
+templateType: global_partial
+label: Page Footer
+-->
+<footer class="custom-footer">
+  <div class="footer__container">
+
+    <div class="col-left">
+      <div class="contact-info">
+        {% module_block module "contact_info" path="@hubspot/rich_text" label="Contact Info" %}
+        {% module_attribute "html" %}
+        <h3>Contact</h3>
+        <p><a href="mailto:info@legartis.ai">info@legartis.ai</a></p>
+        {% end_module_attribute %}
+        {% end_module_block %}
+      </div>  <!-- contact info -->
+    </div>
+
+    <div class="col-center">
+      {% menu "footer_menu" id=40555692519, site_map_name='Default', overrideable=False, root_type='site_root', flyouts='false', max_levels='2', flow='horizontal', label='Footer Menu' %}
+    </div>
+
+    <div class="col-right">
+      <div class="newsletter-signup">
+        <div class="footer-form">
+          {% module "footer_form" path="@hubspot/form", form={ "form_id": "341d0140-ea73-4393-8b9e-d6b102a41374" }, title="Newsletter" label="Newsletter Form"  %}
+        </div>
+        <br>
+        {% module_block module "form_content" path="@hubspot/rich_text" label="Form Content"%}
+        {% module_attribute "html" %}
+        <img src="{{ get_asset_url('../../images/LogoEurope.png') }}" alt="Co founder by the Horizon 2020 programme of the European Union">
+        <a target="_blank" href="https://www.swissmadesoftware.org/en/about/using-the-logo.html">
+          <img src="{{ get_asset_url('../../images/swiss_made_software.png') }}" alt="Swiss made software">
+        </a>
+        {% end_module_attribute %}
+        {% end_module_block %}
+
+      </div>
+    </div>
+
+    <div class="social">
+      {% module "footer_social_icons" path="../../modules/Footer Social Icons", label="Footer Social Icons" %}
+    </div>
+
+
+  </div>
+</footer>
+<a href="javascript:void(0)" class="playbtn contactPopup">
+  <span class="icon-arrow"></span>
+</a>
+
+<div class="free-demo-popup-wrapper">
+  <div class="free-demo-popup">
+    <div class="free-demo-popup-inner">
+
+      <div class="contact-page">
+        <div class="popup_content_wrapper">
+          <div class="form-left-side">
+            <div class="popup_content">
+              <div class="popup_content_inner">
+                <div class="calender_image">
+                  <div class="icon-calender">
+                    {% module_block module "calender_image" path="@hubspot/rich_text" label="Calender Image"%}
+                    {% module_attribute "html" %}
+                    <img src="{{ get_asset_url('../../images/calender.png') }}" alt="Calender Icon">
+                    {% end_module_attribute %}
+                    {% end_module_block %}
+                  </div>
+                </div>
+                <div class="popup_header">
+                  {% module_block module "popup_header" path="@hubspot/rich_text" label="Popup Header"%}
+                  {% module_attribute "html" %}
+                  <h2> Schedule your free demo</h2>
+                  <p> No obligation, no payment and no credit card required</p>
+                  {% end_module_attribute %}
+                  {% end_module_block %}
+                </div>
+              </div>
+              <div class="popup_description">
+                {% module_block module "popup_description" path="@hubspot/rich_text" label="Popup Description"%}
+                {% module_attribute "html" %}
+                <p>With the Legartis solution, you can save up to 85% of
+                  <br>
+                  your time when reviewing, analysing and managing contracts.
+                </p>
+                <p>By signing up for a free demo, you have the chance to:</p>
+                <ul>
+                  <li>Get instant insight into our innovative cloud-based solution.</li>
+                  <li>Learn more about our 1:1 training to get you and your team up and running.</li>
+                  <li>Gain access to our hands-on tutorials for procurement, legal and finance.</li>
+                </ul>
+                <p>Sign up today and discover how efficiently Legartis can extract the full value from your teams contracts.</p>
+                {% end_module_attribute %}
+                {% end_module_block %}
+              </div>
+              {% module "popup_logo_slider" path="../../modules/Popup Logo Slider", label="Popup Logo Slider" %}
+            </div>
+          </div>
+          <!-- col 6 -->
+          <div class="popup_form">
+            <div class="popup_form_inner">
+              <div class="popup_form_content">
+                {% module_block module "popup_form_content" path="@hubspot/rich_text" label="Popup Form Content"%}
+                {% module_attribute "html" %}
+                <p>Complete the form below and a Legartis Team member will be in touch shortly to discuss the demo.</p>
+                <p>Please complete all fields.</p>
+                {% end_module_attribute %}
+                {% end_module_block %}
+              </div>
+              <div class="custom-hubspot-form">
+                {% module "popup_form" path="@hubspot/form", form={ "form_id": "2ca7e2db-adb0-490f-a2bb-6802c23216fb" }, title="" label="Popup Form"  %}
+              </div>
+            </div>
+
+          </div>
+          <a>
+            <!-- col 6 -->
+          </a>
+        </div>
+      </div>
+      <button type="button" class="contact_popup_close" title="Close"><svg xmlns="https://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+    </div>
+  </div>
+</div>
+<div class="free-demo-popup-overlay"></div>
+
+
+

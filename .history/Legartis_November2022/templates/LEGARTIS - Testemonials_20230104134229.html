@@ -1,0 +1,119 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label:  Testemonials
+-->
+{% require_css %}
+  <style>
+  .itscontainer1 .topright, .itscontainer1 .topleft, .itscontainer1 .bottomright, .itscontainer1 .bottomleft{
+  display:none;
+}
+ul {
+    margin-top: 0px !important;
+    margin-bottom: 20px !important;
+}
+.imateconta span div {
+    padding-bottom: 0px !important;
+}
+.vid .imate {
+    margin-bottom: 100px !important; 
+}
+.vid .imatext span {
+    white-space: nowrap;
+}
+div#trv1 {
+    background-color: #01256E;
+    margin-top: 140px;
+}
+.revbox {
+    height: 380px !important;
+    width: 450px !important;
+}
+.aspas {
+    height: 35px !important;
+    margin-top: 30px !important;
+}
+.revcont {
+    max-width: 1500px !important;
+}
+span.name {
+    color: #1C3580;
+}
+span.jobtitle {
+    color: #1C3580;
+}
+span.unternehmen {
+    color: #1C3580;
+}
+#trv2 {
+padding-top:0px;
+}
+#trv2 h2{
+display:none;
+}
+.slider-no-slide {
+    margin-top: 120px !important;
+    overflow: hidden;
+    margin-bottom: 250px !important;
+}
+.sexrevcont .top {
+    margin: 0px -34px 0 -106px !important;
+    height: 260px !important;
+}
+.slider-no-slide .topright {
+    height: 198px;
+    margin-bottom: 100px;
+    margin-right: -123px;
+    width: 150%;
+    margin-top: -135px;
+    transform: rotate(3deg);
+}
+.slider-no-slide .topleft{
+    height: 100px;
+    margin-bottom: 100px;
+    margin-left: -43px;
+    margin-top: -134px;
+    transform: rotate(-10deg);
+}
+.slider-no-slide .slider_img1 {
+    width: 35% !important;
+}
+.sexrevcont {
+    padding-top: 0px !important;
+    margin-top: -130px !important;
+}
+.spacer {
+    background-color: white;
+    height: 100px;
+    margin-bottom: -100px;
+}
+.qctacont {
+    height: 300px;
+    margin-top: 701px !important;
+    position: relative !important;
+}
+.sexrevcont span {
+    color: #01256E;
+}
+.singbox {
+    line-height: 20px;
+}
+
+@media only screen and (max-width: 1450px){
+.imateconta {
+    padding: 10px 7% !important;
+}
+}
+  </style>
+  {% end_require_css %}
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--home solution-page legartis', label='Main section' %}
+  
+
+ 
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

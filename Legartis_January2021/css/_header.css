@@ -1,0 +1,60 @@
+/* ******************************************************************************
+*********************************************************************************
+This file contains all the neccessary styles to control how your headers look
+when it comes to the logo, search field, language switcher and navigation.
+You will also find the mobile menu styles below.
+*********************************************************************************
+****************************************************************************** */
+
+.custom-header-height {
+  min-height:90px;
+}
+
+.custom-header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0px;
+  z-index:10;
+  font-size:1rem;
+}
+
+.custom-header .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 20px;
+  margin: 0 auto;
+  min-height: 90px;
+  z-index: 99;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.custom-logo a {
+  display: block;
+}
+
+.custom-logo img {
+  max-width: 170px;
+}
+
+.custom-header .custom-header-right {
+  margin-left: auto;
+}
+
+@media (max-width:992px) {
+
+  .custom-header-height {
+    min-height:80px;
+  }
+
+  .custom-header .header__container {
+    min-height: 80px;
+    padding: 12px 15px;
+  }
+}
+
+
+
+

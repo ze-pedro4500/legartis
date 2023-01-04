@@ -1,0 +1,273 @@
+.itscontainer2 ul {
+    margin:0px;
+}
+.imateconta .slidetitle h6 {
+    margin-top: 14px;
+}
+.itscontainer1 {
+    margin-top: -260px;
+}
+.itscontainer1 ul {
+    display: none;
+}
+::marker {
+    color:#B54D61;
+}
+.imate ul li {
+    padding-left:0px;
+    font-size:16px;
+    font-weight:600;
+    margin-bottom: 0px;
+}
+.imateconta .slidetitle h6 {
+    font-size: 100px;
+    font-weight: 300;
+}
+
+.imateconta .slidetitle h3 {
+    font-size: 100px;
+    font-weight: 300;
+    margin-right: 15px;
+}
+.itscontainer{
+    margin-bottom:-110px;
+}
+.topright{
+
+    height: 100px;
+    transform: rotate(4deg);
+    margin-right: -100px;
+    margin-top: -135px;
+    margin-bottom: 100px;
+}
+.bottomleft {
+
+    height: 150px;
+    transform: rotate(4deg);
+    margin-right: 0px;
+    margin-top: 92px;
+    margin-bottom: 0px;
+    margin-left: -201px;
+}
+.bottomright {
+
+    height: 150px;
+    transform: rotate(-5deg);
+    margin-right: -34px;
+    margin-top: -100px;
+    margin-bottom: 0px;
+    margin-left: -101px;
+}
+
+.topleft {
+  
+    height: 100px;
+    transform: rotate(-5deg);
+    margin-left: -43px;
+    margin-top: -134px;
+    margin-bottom: 100px;
+}
+.imate {
+    display: flex;
+    justify-content: space-between;
+}
+.imateconta h1 {
+    font-size:42px;   
+}
+.imateconta span {
+    font-size:18px;
+}
+.imateconta h2 {
+    font-size:42px;   
+    line-height: 39px;
+    margin-bottom: 40px;
+}
+.imateconta span div {
+    padding-bottom: 25px;
+    width:65%;
+}
+.imateconta {
+    padding: 10px 10%;
+}
+.imatecontamaintxt h1 {
+    font-weight: bold;
+    line-height:50px;
+  font-weight: 700;
+    line-height: 50px;
+    width: 50%;
+    border-bottom: 1px solid red;
+    padding-bottom: 15px;
+}
+.imatext {
+    width: 50%;
+    margin:auto;
+}
+.imateconta .imatext h2 {
+    font-size: 32px;
+    margin-bottom: 0;
+    line-height: 39px;
+    margin-bottom: 15px;
+}
+.imate .cta_button {
+    color: white;
+    background-color: blue;
+    font-family: 'Raleway';
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 11px;
+    width:150px;
+    height:40px;
+}
+.hs-cta-node a:hover {
+    text-decoration: none;
+}
+.imate .imgdiv img {
+    width: 100%;
+}
+.imatecontamobile{
+    display:none; 
+}
+.imgdiv {
+    width:50%;
+}
+.imatext {
+    width:45%;
+}
+@media only screen and (max-width: 1700px) {
+    .imateconta {
+        padding: 10px 7%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .slidetitle h2 {
+    text-align: left;
+}
+.imatext span div {
+    text-align: left;
+}
+.imatext span {
+    margin: unset;
+	}
+	.imatext {
+    width: fit-content;
+}
+.slidetitle {
+    width: 450px;
+}
+.imatext span {
+    width: 450px;
+    display:block;
+}
+.imate ul li {
+    font-size: 22px;
+    font-weight: 500;
+}
+.imate ul {
+    padding-top: 15px;
+	width:450px;
+}
+.imgdiv {
+    padding-bottom: 0px;
+}
+    .imatecontamobile .slidetitle h6 {
+    font-size: 100px;
+    font-weight: 300;
+    display: block;
+    margin-top: 10px;
+}
+    
+    .imatecontamobile{
+    display:block; 
+}
+.imgdiv {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.imateconta{
+    display:none; 
+}
+.imatecontamobile .imatecontamaintxt h2 {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.imatecontamobile .imatecontamaintxt span {
+    text-align: center;
+    width: 85%;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+.imate {
+    display: block;
+    margin-bottom:90px;
+}
+.imate .imgdiv img {
+    width: 500px;
+    margin: auto;
+    display: block;
+}
+.imatext {
+    margin-top: -30px;
+}
+.imatext h2 {
+    text-align: center;
+    margin-bottom:15px;
+}
+
+
+.itscontainer2 .imatecontamobile .slidetitle h2{
+    text-align:left;
+}
+}
+
+
+@media only screen and (max-width: 500px) {
+    
+    .imatecontamobile .imgdiv {
+    padding-bottom: 0px;
+}
+    .imgdiv {
+    width: 80%;
+}
+	.imatext {
+    padding-top: 20px;
+}
+	.imate ul {
+	width:320px;
+    margin:auto;
+    padding-top: 0px;
+}
+.slidetitle {
+    width: 320px;
+    margin:auto;
+}
+.imatext span {
+    width: 320px;
+}
+    .itscontainer2 .imatecontamobile .slidetitle h2 {
+        font-size: 25px;
+        line-height: 27px;
+        padding-top: 13px;
+    }
+    .imatext span div {
+    text-align: left;
+    font-size: 16px;
+}
+.imate ul li {
+    font-size: 16px;
+    font-weight: 500;
+}
+.imatecontamobile .slidetitle h6 {
+    display: block;
+    font-size: 75px;
+    font-weight: 300;
+    margin-top: 25px;
+}
+.imatecontamobile .slidetitle h3 {
+    margin-top: 33px;
+}
+}

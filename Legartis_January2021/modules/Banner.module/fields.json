@@ -1,0 +1,236 @@
+[ {
+  "id" : "70609379-ecac-e349-dd4c-971ca278bde3",
+  "name" : "banner_options",
+  "display_width" : null,
+  "label" : "Banner Options",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "6f11e35e-b6c4-ab44-c7b5-65b7aa7fed29",
+    "name" : "background_type",
+    "display_width" : null,
+    "label" : "Background Type",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "color", "color" ], [ "image", "image" ], [ "video", "video" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "type" : "choice"
+  }, {
+    "id" : "246b8a70-6c9b-d57d-7bba-a7c3bb1e0cb4",
+    "name" : "background_image",
+    "display_width" : null,
+    "label" : "Background Image",
+    "required" : true,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6f11e35e-b6c4-ab44-c7b5-65b7aa7fed29",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "image",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "responsive" : false,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/678613/Custom%20Modules/Wooden%20fence%20panel%20wall%20with%20detail.jpeg",
+      "alt" : "Wooden fence panel wall with detail",
+      "height" : 667,
+      "width" : 1000
+    }
+  }, {
+    "picker" : "file",
+    "id" : "295c83de-ce38-3fc2-8699-1e25be834e40",
+    "name" : "video_file",
+    "display_width" : null,
+    "label" : "Background Video",
+    "help_text" : "Please select an mp4 file from your file manager to use as the background video",
+    "required" : true,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6f11e35e-b6c4-ab44-c7b5-65b7aa7fed29",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "video",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "file",
+    "default" : "https://cdn2.hubspot.net/hubfs/678613/Custom%20Modules/Sample%20Video.mp4"
+  }, {
+    "id" : "ce13be39-83c0-f012-ab17-8b2b7f4cc828",
+    "name" : "color_field",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : true,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6f11e35e-b6c4-ab44-c7b5-65b7aa7fed29",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "color",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#CCCCCC",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_image" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/678613/Custom%20Modules/Wooden%20fence%20panel%20wall%20with%20detail.jpeg",
+      "alt" : "Wooden fence panel wall with detail",
+      "height" : 667,
+      "width" : 1000
+    },
+    "video_file" : "https://cdn2.hubspot.net/hubfs/678613/Custom%20Modules/Sample%20Video.mp4",
+    "color_field" : {
+      "color" : "#CCCCCC",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "495aad40-3bbb-0619-3a29-c9605a3b7cf5",
+  "name" : "banner_content",
+  "display_width" : null,
+  "label" : "Banner Content",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "a26c6c22-a1ce-85c1-b69e-4c7fbe1d14cd",
+    "name" : "banner_area_content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h1>A clear and bold header</h1>\n<h2>A more subdued subheader</h2>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "banner_area_content" : "<h1>A clear and bold header</h1>\n<h2>A more subdued subheader</h2>"
+  }
+}, {
+  "id" : "704df904-e349-3d8b-fa69-cac6f13214a1",
+  "name" : "banner_buttons",
+  "display_width" : null,
+  "label" : "Banner Buttons",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 5,
+    "sorting_label_field" : null,
+    "default" : 0
+  },
+  "children" : [ {
+    "id" : "d5a4bf1b-7030-c781-84b2-8e1d6c87c6de",
+    "name" : "button_type",
+    "display_width" : null,
+    "label" : "Button Type",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "standard", "Standard Button" ], [ "cta", "Call to Action" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "type" : "choice"
+  }, {
+    "id" : "29679f99-a486-3480-a566-aeed29879ced",
+    "name" : "link_field",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : true,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "d5a4bf1b-7030-c781-84b2-8e1d6c87c6de",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "standard",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "",
+        "content_id" : null,
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "id" : "0d78d642-6e94-da04-1bb6-b7d754bd1e84",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button Text",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "d5a4bf1b-7030-c781-84b2-8e1d6c87c6de",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "standard",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Button Text"
+  }, {
+    "id" : "05b5c0d6-2dc2-0882-b323-66d1d8674b94",
+    "name" : "call_to_action",
+    "display_width" : null,
+    "label" : "Call to Action",
+    "required" : true,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "d5a4bf1b-7030-c781-84b2-8e1d6c87c6de",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "cta",
+    "default" : "ecbcbdbd-5272-4305-b580-b82de1c6b35f"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "call_to_action" : "ecbcbdbd-5272-4305-b580-b82de1c6b35f",
+    "button_text" : "Button Text",
+    "link_field" : {
+      "url" : {
+        "href" : "",
+        "content_id" : null,
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }
+} ]
