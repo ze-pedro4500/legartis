@@ -142,6 +142,10 @@ font-size:16px;
 
 @media only screen and (max-width: 1500px) {
     .hp-container .col1 .tblogos img {
+    display: block;
+    margin: auto;
+    max-height: 60px;
+    max-width: 140px !important;
     min-width:120px;
 } 
     .hp-container .col2 img {
@@ -191,9 +195,7 @@ font-size:16px;
 }
 
 @media only screen and (max-width: 1300px) {
-    .hp-container .col1 .tblogos img {
-        min-width:105px;
-    } 
+
     .whitebgflat {
         margin-top: -80px;
     }
@@ -226,18 +228,9 @@ font-size:16px;
 }
 
 
-@media only screen and (max-width: 1100px) {
-    .hp-container .col1 .tblogos img{
-    max-width: 94px!important;
-    min-width: 100px;
-    }
-}
-
 @media only screen and (max-width: 1000px) {
     .tblogos img {
-        max-width: 200px!important;
-    max-height: 100px;
-    min-width: 200px;
+    max-width: 304px !important;
 } 
     .hp-container-mobile{
     display:block;
