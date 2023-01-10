@@ -74,6 +74,7 @@ height:200px;
     margin: auto;
 }
 .tworevcont .revbox {
+    height: auto;
     padding: 40px;
     width: 45%;
     margin: auto;
@@ -100,6 +101,7 @@ height:200px;
 
 @media only screen and (max-width: 900px) {
 .tworevcont .revbox {
+    height: auto;
     margin: auto auto 50px;
     padding: 40px;
     width: 60%;
@@ -118,6 +120,7 @@ height:200px;
     margin-top: 18px;
 }
 .tworevcont .revbox {
+    height: auto;
     margin: auto auto 50px;
     padding: 40px;
     width: 70%;
@@ -139,6 +142,7 @@ height:200px;
     margin: 0px auto auto;
 }
 .tworevcont .revbox {
+    height: auto;
     margin: auto auto 35px;
     padding: 30px;
     width: 100%;

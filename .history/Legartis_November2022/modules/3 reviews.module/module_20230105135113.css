@@ -1,3 +1,6 @@
+.threerevcont {
+    overflow: hidden;
+}
 .grow { 
 transition: all .2s ease-in-out; 
 }
@@ -8,7 +11,7 @@ transform: scale(1.1);
 .underline{
     height: 60px;
 }
-.tworevcont h1 {
+.threerevcont h2 {
     display:flex;
     justify-content: center;
     color:white;
@@ -22,27 +25,26 @@ transform: scale(1.1);
     display: block;
     font-family: Montserrat;
     font-size: 102px;
-    height: 40px;
-    margin-top: 30px;
-    position: relative;
+    height: 22px;
+    margin-top: 28px;
 }
-.tworevcont .revcont {
+.revcont {
     display: flex;
     justify-content: space-around;
     margin: auto;
     max-width: 1400px;
-    width: 80%;
-    z-index: 5;
+    width: 90%;
     position: relative;
+    z-index: 5;
 }
-.tworevcont .revbox {
-    background-color: #fff;
-    -webkit-box-shadow: 3px 10px 20px 3px rgb(0 0 0 / 20%);
-    -moz-box-shadow: 3px 10px 20px 3px rgba(0,0,0,.2);
-    box-shadow: 3px 10px 20px 3px rgb(0 0 0 / 20%);
+.revbox {
     height: auto;
+    width: 350px;
+    background-color: white;
     padding: 23px;
-    width: 44%;
+    -webkit-box-shadow: 3px 10px 20px 3px rgba(0,0,0,0.2);
+-moz-box-shadow: 3px 10px 20px 3px rgba(0,0,0,0.2);
+box-shadow: 3px 10px 20px 3px rgba(0,0,0,0.2);
 }
 span.name, span.jobtitle, span.unternehmen {
     font-size: 16px;
@@ -54,14 +56,13 @@ span.name, span.jobtitle, span.unternehmen {
 span.name {
     font-weight: 600;
 }
-.tworevcont .bottomleft{
+.threerevcont .bottomleft{
 margin-top:-70px;
 height:200px;
 }
-.tworevcont {
+.threerevcont {
     padding-top: 80px;
-    margin-bottom: 40px;
-    overflow: hidden;
+    margin-bottom: -120px;
 }
 @media only screen and (max-width: 1300px) {
     .revcont {
@@ -69,45 +70,29 @@ height:200px;
 }
 }
 @media only screen and (max-width: 1100px) {
-    .tworevcont .revcont {
+    .revcont {
     display: block;
     margin: auto;
 }
-.tworevcont .revbox {
+.revbox {
+    height: 380px;
     padding: 40px;
-    width: 45%;
+    width: 430px;
     margin: auto;
     margin-bottom: 50px;
 }
-.tworevcont .bottomleft {
+.threerevcont .bottomleft {
     height: 200px;
     margin-top: -165px;
 }
-.tworevcont {
+.threerevcont {
     padding-top: 80px;
     margin-bottom: -90px;
 }
-.tworevcont .revcont {
-    width: 95%;
-}
 }
 
-@media only screen and (max-width: 1100px) {
-    .tworevcont .revbox {
-        width: 55%;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-.tworevcont .revbox {
-    margin: auto auto 50px;
-    padding: 40px;
-    width: 60%;
-}
-
-}
 @media only screen and (max-width: 750px) {
-    .tworevcont h1 {
+    .threerevcont h1 {
         display:block;
         text-align:center;
     }
@@ -117,33 +102,35 @@ height:200px;
     margin: auto;
     margin-top: 18px;
 }
-.tworevcont .revbox {
-    margin: auto auto 50px;
-    padding: 40px;
-    width: 70%;
-}
 }
 
 
 @media only screen and (max-width: 500px) {
-    .aspas {
-    font-size: 102px;
-    height: 25px;
-    margin-top: 15px;
+    .threerevcont h2 div.underline {
+    margin-bottom: 40px;
 }
-.tworevcont h1 {
+    .threerevcont h2 div {
+    padding-bottom: 12px;
+}
+    .threerevcont h2 {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+.threerevcont h1 {
     font-size: 32px;
 }
 .underline {
     height: 50px;
     margin: 0px auto auto;
 }
-.tworevcont .revbox {
+.revbox {
+    height: 380px;
     margin: auto auto 35px;
-    padding: 30px;
-    width: 100%;
+    padding: 40px;
+    width: 90%;
 }
-.tworevcont {
+.threerevcont {
     margin-bottom: -40px;
     padding-top: 80px;
 }

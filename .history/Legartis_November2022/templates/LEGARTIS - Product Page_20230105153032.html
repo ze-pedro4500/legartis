@@ -5,19 +5,14 @@
 -->
 {% require_css %}
   <style>
-  @media only screen and (max-width: 500px){
-  .imatecontamobile {
-  padding-top: 50px;
-  margin-top: -150px;
-}
-}
+
   </style>
 {% end_require_css %}
 {% extends "./layouts/base.html" %}
 
 {% block body %}
 <main id="main-content" class="body-container-wrapper">
-  {% dnd_area 'dnd_area' class='body-container body-container--home solution-page legartis', label='Main section' %}
+  {% dnd_area 'dnd_area' class='body-container body-container--home solution-page legartis white-header', label='Main section' %}
   
   {% dnd_section full_width = true, padding={'right':0, 'left': 0, 'top':0, 'bottom':0 } %}
   {% dnd_module path="../modules/Video and Content - Hero Module.module" %}        
